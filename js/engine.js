@@ -13,7 +13,7 @@
  * writing app.js a little simpler to work with.
  */
 
-var Engine = (function(global) {
+var Engine = (function (global) {
     /* Predefine the variables we'll be using within this scope,
      * create the canvas element, grab the 2D context for that canvas
      * set the canvas element's height/width and add it to the DOM.
@@ -79,8 +79,30 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
     }
+
+    /*
+     * Handle collisions 
+     */
+    function checkCollisions() {
+        allEnemies.forEach((enemy) => {
+
+            // collision conditions
+            if (player.x <= enemy.x + 25 && player.x >= enemy.x - 25) {
+                if (player.y <= enemy.y + 25 && player.y >= enemy.y - 25) {
+
+                    // taunt players with js console open :p
+                    console.log('Bug killed ya! Ha! You stink!');
+
+                    // return player to starting position
+                    player.x = 150;
+                    player.y = 406;
+                }
+            }
+        });
+    }
+
 
     /* This is called by the update function and loops through all of the
      * objects within your allEnemies array as defined in app.js and calls
@@ -90,7 +112,7 @@ var Engine = (function(global) {
      * render methods.
      */
     function updateEntities(dt) {
-        allEnemies.forEach(function(enemy) {
+        allEnemies.forEach(function (enemy) {
             enemy.update(dt);
         });
         player.update();
@@ -107,19 +129,20 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png'    // Row 2 of 2 of grass
-            ],
+            'images/water-block.png',   // Top row is water
+            'images/stone-block.png',   // Row 1 of 3 of stone
+            'images/stone-block.png',   // Row 2 of 3 of stone
+            'images/stone-block.png',   // Row 3 of 3 of stone
+            'images/grass-block.png',   // Row 1 of 2 of grass
+            'images/grass-block.png',    // Row 2 of 2 of grass
+
+        ],
             numRows = 6,
             numCols = 5,
             row, col;
 
         // Before drawing, clear existing canvas
-        ctx.clearRect(0,0,canvas.width,canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         /* Loop through the number of rows and columns we've defined above
          * and, using the rowImages array, draw the correct image for that
@@ -149,7 +172,7 @@ var Engine = (function(global) {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
-        allEnemies.forEach(function(enemy) {
+        allEnemies.forEach(function (enemy) {
             enemy.render();
         });
 
@@ -173,7 +196,7 @@ var Engine = (function(global) {
         'images/water-block.png',
         'images/grass-block.png',
         'images/enemy-bug.png',
-        'images/char-boy.png'
+        'images/char-horn-girl.png'
     ]);
     Resources.onReady(init);
 

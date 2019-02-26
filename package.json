@@ -1,0 +1,27 @@
+{
+  "name": "frontend-nanodegree-arcade-game",
+  "version": "1.0.0",
+  "description": "Udacity FEND Arcade Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udacity/frontend-nanodegree-arcade-game.git"
+  },
+  "keywords": [
+    "Udacity",
+    "FEND",
+    "Arcade"
+  ],
+  "author": "cacarr-pdxweb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/udacity/frontend-nanodegree-arcade-game/issues"
+  },
+  "homepage": "https://github.com/udacity/frontend-nanodegree-arcade-game#readme",
+  "dependencies": {
+    "jshint": "^2.10.1"
+  }
+}
