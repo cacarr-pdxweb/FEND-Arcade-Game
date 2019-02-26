@@ -1,20 +1,13 @@
-# Classic Arcade Game Clone Project
+# Udacity Front-End Nanodegree - Project 3 - Arcade Game
 
-## Table of Contents
+**Gameplay**
++ Use arrow keys to reach the water.
++ Avoid the evil, speed-randomized ladybird beetles, they will reset your character to the start position
+ 
+![game screenshot ](https://raw.githubusercontent.com/cacarr-pdxweb/FEND-Arcade-Game/master/FEND-Arcade-Game.png "Arcade Game")
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+The game can be played here: https://cacarr-pdxweb.github.io/FEND-Arcade-Game/
 
-## Instructions
+Or download the project, and open index.html in your browser.
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/15/view) for self-checking your submission.
-
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
-
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
-
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
-
-## Contributing
-
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+This project focused on Object-Oriented JavaScript. We were provided with art assets and a game engine, and were required to implement enemy and player classes within app.js, handle arrow key input, and develop enemy and player collision detection -- which I implemented in engine.js. While I was unfortunately under time constraints and only able to include basic functionality, I did take the opportunity to further acquainte myself with ES6 class syntax, including super and subclasses.   
