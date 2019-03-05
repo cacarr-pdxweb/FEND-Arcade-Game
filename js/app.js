@@ -80,10 +80,10 @@ class Player extends Entities {
         }
         
         // x axis movement constraints 
-        if (this.x < -100) {
+        if (this.x < 100) {
             this.x = 0;
-        } else if (this.x > 455) {
-            this.x = 455;
+        } else if (this.x > 400) {
+            this.x = 400;
         }
         
     }
@@ -97,7 +97,7 @@ class Player extends Entities {
     handleInput(move) {
         switch(move) {
             case 'left':
-                if(this.x > 0) {
+                if(this.x >= 0) {
                     this.x -= 100;
                 }
             break;
