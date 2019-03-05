@@ -66,7 +66,7 @@ class Player extends Entities {
         this.move = move;
         
         //player start position
-        this.x = 150;
+        this.x = 203;
         this.y = 406;
     }
 

@@ -96,7 +96,7 @@ var Engine = (function (global) {
                     console.log('Bug killed ya! Ha! You stink!');
 
                     // return player to starting position
-                    player.x = 150;
+                    player.x = 203;
                     player.y = 406;
                 }
             }
