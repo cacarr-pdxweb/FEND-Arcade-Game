@@ -89,8 +89,8 @@ var Engine = (function (global) {
         allEnemies.forEach((enemy) => {
 
             // collision conditions
-            if (player.x <= enemy.x + 25 && player.x >= enemy.x - 25) {
-                if (player.y <= enemy.y + 25 && player.y >= enemy.y - 25) {
+            if (player.x <= enemy.x + 79 && player.x >= enemy.x - 79) {
+                if (player.y <= enemy.y + 50 && player.y >= enemy.y - 50) {
 
                     // taunt players with js console open :p
                     console.log('Bug killed ya! Ha! You stink!');
